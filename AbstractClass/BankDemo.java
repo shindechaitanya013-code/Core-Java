@@ -1,26 +1,26 @@
-interface Bank {
+interface Bank{
     void deposit(int amount);
     void withdraw(int amount);
 }
 
-class Account implements Bank {
+class Account implements Bank{
     int balance = 5000;
 
-    public void deposit(int amount) {
+    public void deposit(int amount){
         balance += amount;
     }
 
-    public void withdraw(int amount) {
+    public void withdraw(int amount){
         balance -= amount;
     }
 
-    void display() {
+    void display(){
         System.out.println("Balance: " + balance);
     }
 }
 
 public class BankDemo{
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Account a = new Account();
         a.deposit(2000);
         a.withdraw(1000);
