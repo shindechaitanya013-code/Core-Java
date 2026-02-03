@@ -2,7 +2,6 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class GridLayoutDemo extends Frame{
-
     public GridLayoutDemo(){
         setLayout(new GridLayout(5,2));
 
