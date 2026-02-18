@@ -1,0 +1,29 @@
+import java.io.*;
+
+class GraceMark{
+    public static void main(String args[]) throws IOException{
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        int a[] = new int[5];
+        String text;
+        System.out.println("Enter the five marks one by one: ");
+
+        for(int i = 0; i < 5; i++){
+            text = in.readLine();
+            a[i] = Integer.parseInt(text);
+        }
+
+        for(int i = 0; i < 5; i++){
+            a[i] = a[i] + 5;
+            
+            if(a[i] > 100){
+                a[i] = 100;
+            }
+        }
+
+        System.out.println("Marks after modification (+5) are printed below: ");
+        for(int i = 0; i < 5; i++){
+            System.out.println(a[i]);
+        }
+    }    
+}
