@@ -1,0 +1,23 @@
+import java.io.*;
+
+public class ByteArrayInputStreamResetDemo{
+    public static void main(String args[]){
+        String str = "siom";
+        byte b[] = str.getBytes();
+
+        ByteArrayInputStream bin = new ByteArrayInputStream(b);
+
+        for(int i=0; i<2; i++){
+            int c;
+            while((c = bin.read()) != -1){
+                if(i == 0){
+                    System.out.println((char)c);
+                }else{
+                    System.out.println(Character.toUpperCase((char)c));
+                }
+            }
+            System.out.println();
+            bin.reset();
+        }
+    }
+}
